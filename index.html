@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html{
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        footer {
+  text-align: center;
+  padding: 2px;
+  background-color: rgb(5, 13, 46);
+  color: white;
+}
+        .bg{
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.4); 
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero{
+            background-image: url(https://i.pinimg.com/originals/1b/0f/ea/1b0fea0870112795b7950d17fc747ba5.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+        }
+        .Up-nav{
+            border-radius: 0%;
+            background-color: #081825;
+            height: 80px;
+            overflow: hidden;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+        }
+        * {box-sizing: border-box;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {
+    border-radius: 400px;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    }
+
+    /* Caption text */
+    .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .active {
+    background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+    }
+    .round{
+        border-radius: 30px;
+    }
+    </style>
+    <head>
+        
+    </head>
+    <body>
+        <audio id="song">
+            <src="MontageF/katatheme.mp3">
+        </audio>
+        <script>
+            window.addEventListener('click', () =>{
+                document.getElementById("song").play();
+            });
+            </script>
+        <div class="hero">
+            <div id = "f-page" class ="Up-nav">
+            <a href="https://wildrift.leagueoflegends.com/en-us/" target="_blank">
+            <img src="images/LoLWildRift-lg.png" width="6%" style="padding:  10px;">
+        </a>
+            <img src="images/assasin.png" width="7%" style="padding:  10px;">
+            <a href="https://web.facebook.com/Kairisurtida" target="_blank">
+                <img align="right" src="images/pieacebok.png" width="6%" style="padding: 1px;">
+            </a>
+            <a href="https://www.youtube.com/channel/UCTm1Ft9HZufqDwcO4qZDXaQ" target="_blank">
+            <img align="right" src="images/yetibe.png" width="8%" style="padding: 1px;">
+            </a>
+        </div>
+        <h1></h1>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <a href="https://www.youtube.com/watch?v=C3xVKYEOsqA" target="_blank">
+              <img src="images/kata1.jpg" style="width:100%" class="round">
+            </a>
+              <div class="text">Katarina Play 1</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <a href="https://www.youtube.com/watch?v=_J8leWxBVcQ" target="_blank">
+              <img src="images/kata2.jpg" style="width:100%" class="round">
+            </a>
+              <div class="text">Katarina Play 2</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <a href="https://www.youtube.com/watch?v=Ve2eccDFMQk" target="_blank">
+              <img src="images/kata3.jpg" style="width:100%" class="round">
+            </a>
+              <div class="text">Katarina Play 3</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <a href="https://www.youtube.com/watch?v=aQPljV8SPLE" target="_blank">
+                <img src="images/kata4.jpg" style="width:100%" class="round">
+            </a>
+                <div class="text">Katarina Play 4</div>
+              </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span> 
+            </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 5000);
+                }
+                </script>
+                 <footer>
+                    <p>Author: SHAWN KAIRI B. SURTIDA<br>
+                    <a href="surtidashawnkairi_bsit@plmun.edu.ph">surtidashawnkairi_bsit@plmun.edu.ph</a></p>
+                  </footer>
+        </div>
+    </body>
+</html>
